@@ -4,15 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use PhpParser\Node\Expr\FuncCall;
 
-class Goal extends Model
+class Distance extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'description', 'target_distance', 'target_date'
+        'user_id', 'distance', 'date'
     ];
-
     public function user()
     {
         return $this->belongsTo(User::class);
